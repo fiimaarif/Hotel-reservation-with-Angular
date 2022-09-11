@@ -1,0 +1,96 @@
+<section class="booking-form vh-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-12">
+        <button class="btn btn-danger mt-3" routerLink="/booking/list">
+          <i class="bi bi-arrow-left-short"></i> Kembali
+        </button>
+        <div class="card p-2 mt-3">
+          <form
+            class="row g-3"
+            [formGroup]="bookingGroup"
+            (ngSubmit)="onSubmitReservation()"
+          >
+            <div class="col-md-4">
+              <label for="namaPemesan" class="form-label">Nama Pemesan</label>
+              <input
+                type="text"
+                class="form-control"
+                id="namaPemesan"
+                placeholder="masukkan nama pemesan"
+                formControlName="{{ field.NAME }}"
+                [readonly]="bookingGroup.value.id"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="namaPemesan" class="form-label">Email Pemesan</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailPemesan"
+                placeholder="masukkan email pemesan"
+                formControlName="{{ field.EMAIL }}"
+                [readonly]="bookingGroup.value.id"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="nohpPemesan" class="form-label">No HP Pemesan</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nohpPemesan"
+                placeholder="masukkan No HP pemesan"
+                formControlName="{{ field.PHONE }}"
+                [readonly]="bookingGroup.value.id"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <label for="nomorKamar" class="form-label">Nomor Kamar</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nomorKamar"
+                placeholder="isi nomor kamar"
+                formControlName="{{ field.ROOM_NUMBER }}"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <label for="jumlahTamu" class="form-label">Jumlah Tamu</label>
+              <input
+                type="number"
+                class="form-control"
+                id="jumlahTamu"
+                placeholder="isi jumlah tamu"
+                formControlName="{{ field.GUEST_COUNT }}"
+                [readonly]="bookingGroup.value.id"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <label for="durasiMenginap" class="form-label"
+                >Durasi Menginap</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="durasiMenginap"
+                placeholder="isi durasi menginap"
+                formControlName="{{ field.DURATION }}"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-danger">
+                <i class="bi bi-plus-lg"></i> Book Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

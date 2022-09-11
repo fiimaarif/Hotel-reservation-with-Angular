@@ -1,0 +1,20 @@
+#header {
+  transition: all 0.5s;
+}
+.navbar-brand {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 25px;
+}
+.text-navbar {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+}
+.nav-link {
+  letter-spacing: 1.5px;
+  color: #dc3545;
+}
+.nav-link:hover {
+  color: white;
+}

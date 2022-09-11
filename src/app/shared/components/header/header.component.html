@@ -1,0 +1,75 @@
+<header id="header" class="sticky-top bg-pascal">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand text-danger" routerLink=""
+        ><i class="bi bi-door-open text-danger fs-2"></i>Pascal R<span
+          class="text-light"
+          >oo</span
+        >m</a
+      >
+      <button
+        class="navbar-toggler border border-danger"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-navbar" aria-current="page" routerLink=""
+              >BERANDA</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-navbar"
+              aria-current="page"
+              routerLink=""
+              [ngxScrollTo]="'#about'"
+              >ABOUT</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-navbar"
+              aria-current="page"
+              routerLink=""
+              [ngxScrollTo]="'#article'"
+              >ARTICLE</a
+            >
+          </li>
+          <ng-container *ngIf="!isLoggedIn(); else elseTemplate">
+            <button
+              type="button"
+              class="btn btn-danger text-navbar"
+              routerLink="/auth/login"
+            >
+              LOGIN
+            </button>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <button
+              type="button"
+              class="btn btn-outline-danger me-2 text-navbar"
+              routerLink="/booking/list"
+            >
+              BOOK NOW
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger text-navbar"
+              routerLink="/auth/logout"
+            >
+              LOGOUT
+            </button>
+          </ng-template>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

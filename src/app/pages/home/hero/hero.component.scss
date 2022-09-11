@@ -1,0 +1,25 @@
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(9, 12, 37, 0.75)),
+    url(../../../../assets/images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.hero-wrapper {
+  padding-top: 200px;
+}
+.hero-text {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+}
+.hero-title {
+  font-size: 80px;
+  line-height: 65px;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 3px;
+}
+.hero-subtitle {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 40px;
+}
