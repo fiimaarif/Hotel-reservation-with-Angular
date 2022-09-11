@@ -1,5 +1,8 @@
 # Pascalapp
 
+you must log in to be able to book a room 
+gmail : admin@gmail.com pass : password
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
 
 ## Development server
